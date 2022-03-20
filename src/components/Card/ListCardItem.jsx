@@ -6,13 +6,9 @@ import CardItem from "./CardItem";
 import styles from "./ListCardItem.module.css";
 
 const Item = styled(Paper)(({ theme }) => ({
-  //backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
   padding: theme.spacing(2.5),
   borderRadius: "30px",
-  //textAlign: "center",
-
-  //color: theme.palette.text.secondary,
 }));
 
 function ListCardItem(props) {
@@ -33,4 +29,4 @@ function ListCardItem(props) {
   );
 }
 
-export default ListCardItem;
+export default React.memo(ListCardItem);

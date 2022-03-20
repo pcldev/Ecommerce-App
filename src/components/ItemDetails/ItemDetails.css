@@ -107,7 +107,8 @@
   padding: 10px 15px;
 }
 .itemDetails .content .tags {
-  width: 20%;
   display: flex;
-  justify-content: space-between;
+}
+.itemDetails .content .tags span {
+  margin-right: 10px;
 }
