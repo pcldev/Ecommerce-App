@@ -1,0 +1,39 @@
+.cardItem {
+  /* background-color: white; */
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+.cardItem img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.cardItem .content p {
+  color: rgba(231, 103, 71, 1);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+}
+.cardItem .content h2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 35px;
+}
+.cardItem .bottom-card {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardItem .bottom-card p {
+  /* display: inline; */
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  margin: 0;
+  /* line-height: 35px; */
+}

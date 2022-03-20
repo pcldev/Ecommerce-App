@@ -1,0 +1,113 @@
+.itemDetails {
+  margin-top: 40px;
+  padding: 0 10%;
+  display: grid;
+  grid-template-columns: minmax(350px, 500px) 1fr;
+}
+.itemDetails .images {
+  margin: 40px 0 0 20px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper2 {
+  height: 80%;
+  width: 100%;
+}
+
+.mySwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+  border: 3px solid #ccc;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.itemDetails .content {
+  max-width: 100%;
+  min-width: 400px;
+  margin-left: 60px;
+  margin-right: 40px;
+}
+
+.itemDetails .content h2 {
+  font-size: 2rem;
+}
+.itemDetails .content > p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #464646;
+  margin: 20px 0;
+}
+.itemDetails .content .size {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+.itemDetails .content .size span {
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.itemDetails .content .price {
+  color: #ff2d54;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.itemDetails .content .button-container {
+  width: 15%;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemDetails .content .button-container button {
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.itemDetails .content .button-container .number {
+  font-size: 20px;
+}
+
+.itemDetails .content .btn-addToCart {
+  margin-left: 15px;
+  padding: 10px 15px;
+}
+.itemDetails .content .tags {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
