@@ -16,7 +16,7 @@ function ItemDetails(props) {
       return;
     } else {
       setQuantity(() => quantity - 1);
-      setPrice(() => priceVal / 2);
+      setPrice(() => priceVal - price);
     }
   };
   const onIncrementHandler = () => {
@@ -24,7 +24,7 @@ function ItemDetails(props) {
       return;
     } else {
       setQuantity(() => quantity + 1);
-      setPrice(() => priceVal * 2);
+      setPrice(() => priceVal + price);
     }
   };
 
