@@ -4,11 +4,21 @@ import { useHistory } from "react-router-dom";
 import styles from "./CardItem.module.css";
 
 function CardItem(props) {
-  const { imageUrl, name, type, price, id } = props.item;
+  const {
+    media,
+    title: name,
+    gender: type,
+    retailPrice: price,
+    id,
+  } = props.item;
   const history = useHistory();
   const onClickHandler = () => {
     history.push(`/items/${id}`);
   };
+
+  const imageUrl =
+    media.imageUrl !== null ? media.imageUrl : require("../../alternative.jpg");
+
   return (
     <div className={styles.cardItem}>
       <img src={imageUrl} alt={`${name} img`} />

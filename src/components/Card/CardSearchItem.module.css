@@ -1,0 +1,19 @@
+.searchItem {
+  display: flex;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.searchItem:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  opacity: 0.8;
+}
+
+.searchItem img {
+  width: 50%;
+  padding: 15px;
+}
+
+.searchItem .content p {
+  color: black;
+}

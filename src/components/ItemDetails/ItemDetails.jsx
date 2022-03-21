@@ -20,7 +20,7 @@ function ItemDetails(props) {
     }
   };
   const onIncrementHandler = () => {
-    if (quantity == 7) {
+    if (quantity === 7) {
       return;
     } else {
       setQuantity(() => quantity + 1);

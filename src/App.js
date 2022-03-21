@@ -1,9 +1,10 @@
-import { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Route } from "react-router-dom";
 import { Redirect } from "react-router-dom";
 import { Switch } from "react-router-dom";
 import ListCardItem from "./components/Card/ListCardItem";
 import MainHeader from "./components/Header/MainHeader";
+import LoadingSpinner from "./components/Loading/LoadingSpinner";
 import ItemDetail from "./pages/item-detail";
 
 const initItems = {
@@ -1370,21 +1371,53 @@ const initItems = {
   },
 };
 
-const items = [];
-items.push(...initItems.womens.items);
-items.push(...initItems.mens.items);
-items.push(...initItems.kids.items);
+// const items = [];
+// items.push(...initItems.womens.items);
+// items.push(...initItems.mens.items);
+// items.push(...initItems.kids.items);
 
 function App() {
+  const [items, setItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const getData = async () => {
+      setIsLoading(true);
+      const response = await fetch(
+        "https://v1-sneakers.p.rapidapi.com/v1/sneakers?limit=100",
+        {
+          method: "GET",
+          headers: {
+            "x-rapidapi-host": "v1-sneakers.p.rapidapi.com",
+            "x-rapidapi-key":
+              "f83d7681f9msh46948b6b53dcf5ep104163jsn8e18cf8bc145",
+          },
+        }
+      );
+
+      const data = await response.json();
+      setItems(data);
+      setIsLoading(false);
+    };
+    getData();
+  }, []);
   return (
     <>
-      <MainHeader />
+      <MainHeader items={items} isLoading={isLoading} />
       <Switch>
         <Redirect from="/items" to="/" exact />
 
-        <Route path="/" exact>
-          <ListCardItem items={items} />
-        </Route>
+        {!isLoading ? (
+          <Route path="/" exact>
+            <ListCardItem items={items} />
+          </Route>
+        ) : (
+          <>
+            <div className="centered">
+              <LoadingSpinner />
+            </div>
+          </>
+        )}
 
         <Route path="/items/:itemId">
           <ItemDetail items={items} />

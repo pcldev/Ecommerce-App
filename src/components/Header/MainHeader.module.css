@@ -13,3 +13,52 @@
   color: white;
   margin: 0;
 }
+
+.mainHeader .navLink {
+  text-decoration: none;
+}
+
+.mainHeader .search-container {
+  position: relative;
+  /*                        */
+}
+
+.mainHeader .search-container .searchInputField {
+  width: 350px;
+}
+
+.mainHeader .search-container .suggestion-container {
+  display: none;
+  position: absolute;
+  overflow-y: scroll;
+  width: 100%;
+  height: 500px;
+  max-width: 750px;
+  top: 120%;
+  left: 0;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #cacaca;
+  z-index: 999;
+}
+
+.mainHeader .search-container .suggestion-container.active {
+  display: block;
+}
+
+.mainHeader .search-container .suggestion-container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.mainHeader .search-container .suggestion-container::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+}
+
+.mainHeader .search-container .suggestion-container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}

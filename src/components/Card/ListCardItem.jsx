@@ -16,7 +16,7 @@ function ListCardItem(props) {
     <div className={styles.listCardItem}>
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={3} columns={12}>
-          {props.items.map((item) => (
+          {props.items.results.map((item) => (
             <Grid item xl={3} key={item.id}>
               <Item>
                 <CardItem item={item} />

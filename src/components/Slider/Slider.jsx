@@ -12,9 +12,12 @@ import "./Slider.css";
 // import required modules
 import { FreeMode, Navigation, Thumbs } from "swiper";
 
+import * as alternativeImg from "../../alternative.jpg";
+
 function Slider(props) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const images = props.images;
+
   return (
     <div className="images">
       <Swiper
@@ -32,7 +35,7 @@ function Slider(props) {
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <img src={image} alt="" />
+            <img src={image ? image : alternativeImg} alt="" />
           </SwiperSlide>
         ))}
       </Swiper>
